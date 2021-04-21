@@ -1,0 +1,74 @@
+{
+  "title": "Talleres",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque bibendum fringilla gravida adipiscing eget urna elit. Fermentum, cursus turpis vitae at a et nunc convallis laoreet.",
+  "cards": [
+    {
+      "title": "Orientacion a padres",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+    },
+    {
+      "title": "Planificacion de objetivos",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+    },
+    {
+      "title": "Manejo del estres",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+    }
+  ],
+  "workshops": [
+    {
+      "title": "Orientacion a padres",
+      "video": "https://grindfacetv.com/wp-content/uploads/2019/07/Play-video.png",
+      "modules": [
+        {
+          "title": "Modulo I",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        },
+        {
+          "title": "Modulo II",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        },
+        {
+          "title": "Modulo III",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        }
+      ]
+    },
+    {
+      "title": "Planificacion de objetivos",
+      "video": "https://grindfacetv.com/wp-content/uploads/2019/07/Play-video.png",
+      "modules": [
+        {
+          "title": "Modulo I",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        },
+        {
+          "title": "Modulo II",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        },
+        {
+          "title": "Modulo III",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        }
+      ]
+    },
+    {
+      "title": "Manejo del estres",
+      "video": "https://grindfacetv.com/wp-content/uploads/2019/07/Play-video.png",
+      "modules": [
+        {
+          "title": "Modulo I",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        },
+        {
+          "title": "Modulo II",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        },
+        {
+          "title": "Modulo III",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+        }
+      ]
+    }
+  ]
+}

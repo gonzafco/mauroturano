@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Consultorio",
+    "text": "Accede a la agenda semanal y consulta por un turno disponible para vos."
+  },
+
+  {
+    "title": "Talleres",
+    "text": "Observa el contenido disponible que tenemos pensado desde un marco psicologico."
+  },
+  {
+    "title": "blog",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+  },
+  {
+    "title": "cuentos y libros ",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet."
+  },
+  {
+    "title": "Reseñas",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet."
+  },
+  {
+    "title": "Redes sociales",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet."
+  }
+]

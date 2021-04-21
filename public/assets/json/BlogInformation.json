@@ -1,0 +1,18 @@
+{
+  "title": "Blog",
+  "text": "Blog de psicología, clara y sencilla. Lista para aplicar a tu vida cotidiana. Conociéndote mas a ti mismo, tus funciones y lograr una Mente Fuerte",
+  "cards": [
+    {
+      "title": "Un psicólogo en un evento social ...",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+    },
+    {
+      "title": "Perfeccion = Parálisis",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+    },
+    {
+      "title": "Los miedos, nuestros mejores amigos",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+    }
+  ]
+}

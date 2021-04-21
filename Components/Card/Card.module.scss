@@ -1,0 +1,41 @@
+.Card {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px 30px;
+  background: rgba(#f6f6f6, 1);
+  border-radius: 15px;
+  overflow: hidden;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &:hover > .BorderColor{
+    background: rgba(#ff2014, 0.5);
+  }
+
+  .CardTitle {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+
+  .CardText {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+  }
+  .BorderColor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background: rgba(#1282a2, 0.5);
+  }
+}
+
+
