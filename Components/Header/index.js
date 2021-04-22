@@ -8,7 +8,7 @@ export default function Header() {
     <header className={styles.Header}>
       <Brand brand={"Mauro Turano"}/>
       {/* <Navbar /> */}
-      <Whoami text={"¿Quien soy?"} />
+      <Whoami path="/" text={"¿Quien soy?"} />
     </header>
   );
 }

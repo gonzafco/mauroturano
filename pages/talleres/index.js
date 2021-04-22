@@ -14,12 +14,11 @@ import {
 export default function index() {
   return (
     <>
+      <Head>
+        <title>Mauro Turano - {title}</title>
+      </Head>
       <Header />
       <section className={styles.Talleres}>
-        <Head>
-          <title>Mauro Turano - {title}</title>
-        </Head>
-
         <WorkshopHero title={title} text={text} cards={cards} />
 
         {workshops.map((workshop, key) => {

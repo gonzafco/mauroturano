@@ -1,7 +1,12 @@
-.Hero{
+.Hero {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-content: space-around;
   flex-wrap: wrap;
-  height: calc(85vh - 95px);
+  height: 70vh;
+
+  & > div {
+    flex-basis: 30%;
+    height: 190px;
+  }
 }

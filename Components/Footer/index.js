@@ -12,7 +12,7 @@ export default function index() {
       </div>
       <div className={styles.BrandAndButton}>
         <Brand brand={brand} />
-        <PrimaryBtn text={text} />
+        <PrimaryBtn text={text} path="/"/>
       </div>
     </footer>
   );
