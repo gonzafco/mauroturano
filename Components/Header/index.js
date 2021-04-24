@@ -1,14 +1,14 @@
 import Brand from "../Brand";
 import Navbar from "../Navbar";
-import Whoami from "../PrimaryBtn";
+import PrimaryBtn from "../PrimaryBtn";
 import styles from "./Header.module.scss";
 
 export default function Header() {
   return (
     <header className={styles.Header}>
-      <Brand brand={"Mauro Turano"}/>
+      <Brand brand={"Mauro Turano"} path={"/"} />
       {/* <Navbar /> */}
-      <Whoami path="/" text={"¿Quien soy?"} />
+      <PrimaryBtn path="/#quiensoy" text={"¿Quien soy?"} />
     </header>
   );
 }

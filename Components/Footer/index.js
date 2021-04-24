@@ -8,11 +8,11 @@ export default function index() {
   return (
     <footer className={styles.Footer}>
       <div className={styles.Navbar}>
-        <Navbar/>
+        <Navbar />
       </div>
       <div className={styles.BrandAndButton}>
-        <Brand brand={brand} />
-        <PrimaryBtn text={text} path="/"/>
+        <Brand brand={brand} path="/" />
+        <PrimaryBtn text={text} path="/#quiensoy" />
       </div>
     </footer>
   );

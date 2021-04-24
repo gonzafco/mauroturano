@@ -1,0 +1,41 @@
+.WhoAMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 120px;
+  height: 100vh;
+  .TextContainer {
+    width: calc(50% - 30px);
+    display: flex;
+    flex-direction: column;
+    .Presentation {
+      font-family: Montserrat, "sans-serif";
+      font-weight: 500;
+      font-size: 36px;
+    }
+    .FullName {
+      font-family: Equinox;
+      font-size: 48px;
+      font-weight: normal;
+      color: #1282a2;
+    }
+    .Paragraph {
+      font-family: Montserrat, "sans-serif";
+      font-size: 18px;
+      font-weight: 300;
+      color: #000000;
+    }
+  }
+  .BlobDecoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 30px);
+    background-image: url("data:image/svg+xml,%3Csvg width='489' height='447' viewBox='' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M275.092 68.2274C327.169 76.8857 388.395 61.9913 427.502 93.5473C466.55 125.056 468.187 176.211 459.11 216.716C451.266 251.716 399.141 263.811 382.165 295.848C360.893 335.991 398.324 404.68 349.653 423.282C302.787 441.195 252.039 383.09 199.963 365.487C155.442 350.437 97.4303 359.288 67.4309 327.882C37.4071 296.451 60.3035 255.255 58.7723 217.675C57.4123 184.299 44.1304 150.005 58.9739 120.335C75.2616 87.7773 102.498 56.588 144.416 46.4813C185.821 36.4985 230.44 60.8035 275.092 68.2274Z' fill='%231282A2' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+    .ImgDecoration {
+      height: 410px;
+    }
+  }
+}
