@@ -1,5 +1,5 @@
 import styles from "./talleres.module.scss";
-import Header from "../../Components/Header";
+import Header from "../../src/Components/Header";
 
 export default function index() {
   return (

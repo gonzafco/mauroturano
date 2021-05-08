@@ -1,9 +1,9 @@
 import styles from "./talleres.module.scss";
 import Head from "next/head";
-import Header from "../../Components/Header";
-import WorkshopHero from "../../Components/WorkshopHero";
-import WorkshopDetail from "../../Components/WorkshopDetail";
-import Footer from "../../Components/Footer";
+import Header from "../../src/Components/Header";
+import WorkshopHero from "../../src/Components/WorkshopHero";
+import WorkshopDetail from "../../src/Components/WorkshopDetail";
+import Footer from "../../src/Components/Footer";
 import {
   title,
   text,

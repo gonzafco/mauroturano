@@ -1,12 +1,34 @@
 import Head from "next/head";
 import styles from "./Home.module.scss";
-import Header from "../Components/Header";
-import Hero from "../Components/Hero";
-import WhoAMe from "../Components/WhoAMe";
-import Footer from "../Components/Footer";
-import Cards from "../public/assets/json/HomeCards.json";
+import Header from "../src/Components/Header";
+import Hero from "../src/Components/Hero";
+import WhoAMe from "../src/Components/WhoAMe";
+import Footer from "../src/Components/Footer";
+import { useState, useEffect } from "react";
+import sanityClient from "../src/client";
 
 export default function Home() {
+  const [cardsContent, setCardsContent] = useState([]);
+  const [whoAMe, setWhoAMe] = useState();
+  useEffect(() => {
+    fetchDataHome();
+    fetchDataWhoAMe();
+  }, []);
+
+  function fetchDataHome() {
+    sanityClient
+      .fetch('*[_type=="home"]{text,title,path}')
+      .then((data) => setCardsContent(data))
+      .catch(console.error);
+  }
+
+  function fetchDataWhoAMe() {
+    sanityClient
+      .fetch('*[_type=="whoAMe"][0]{name,text,title}')
+      .then((data) => setWhoAMe(data))
+      .catch(console.error);
+  }
+
   return (
     <>
       <Head>
@@ -15,9 +37,10 @@ export default function Home() {
       </Head>
       <Header />
       <div className={styles.Home}>
-        <Hero cards={Cards} />
+        <Hero cards={cardsContent} />
       </div>
-      <WhoAMe fullName={"Mauro Turano"} />
+      <WhoAMe whoAMe={whoAMe} />
+
       <Footer />
     </>
   );

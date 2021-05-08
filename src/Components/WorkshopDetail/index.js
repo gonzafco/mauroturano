@@ -10,7 +10,14 @@ export default function index({ title, text, modules, video }) {
       </div>
       <div className={styles.BoxCards}>
         {modules.map((module, key) => {
-          return <Card title={module.title} text={module.text} key={key} />;
+          return (
+            <Card
+              title={module.title}
+              text={module.text}
+              key={key}
+              path={""}
+            />
+          );
         })}
       </div>
     </div>

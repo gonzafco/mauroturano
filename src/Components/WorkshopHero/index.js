@@ -10,7 +10,9 @@ export default function index({ title, text, cards, video }) {
       </div>
       <div className={styles.BoxCards}>
         {cards.map((card, key) => {
-          return <Card title={card.title} text={card.text} key={key} />;
+          return (
+            <Card title={card.title} text={card.text} key={key} path={""} />
+          );
         })}
       </div>
     </div>

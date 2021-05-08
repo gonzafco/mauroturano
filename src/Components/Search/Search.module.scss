@@ -1,0 +1,32 @@
+.InputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #1282a2;
+  border-radius: 15px;
+  padding: 10px 20px;
+  .Input {
+    max-width: 200px;
+    border-style: unset;
+    font-family: Montserrat, "sans-serif";
+    font-size: 25px;
+    font-weight: 400;
+    outline: none;
+
+    &::placeholder {
+      font-family: Montserrat, "sans-serif";
+      font-size: 20px;
+      font-weight: 300;
+      color: rgba(#1282a2, 1);
+    }
+  }
+
+  .Icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCA1MCA1MCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDIxIDMgQyAxMS42MjEwOTQgMyA0IDEwLjYyMTA5NCA0IDIwIEMgNCAyOS4zNzg5MDYgMTEuNjIxMDk0IDM3IDIxIDM3IEMgMjQuNzEwOTM4IDM3IDI4LjE0MDYyNSAzNS44MDQ2ODggMzAuOTM3NSAzMy43ODEyNSBMIDQ0LjA5Mzc1IDQ2LjkwNjI1IEwgNDYuOTA2MjUgNDQuMDkzNzUgTCAzMy45MDYyNSAzMS4wNjI1IEMgMzYuNDYwOTM4IDI4LjA4NTkzOCAzOCAyNC4yMjI2NTYgMzggMjAgQyAzOCAxMC42MjEwOTQgMzAuMzc4OTA2IDMgMjEgMyBaIE0gMjEgNSBDIDI5LjI5Njg3NSA1IDM2IDExLjcwMzEyNSAzNiAyMCBDIDM2IDI4LjI5Njg3NSAyOS4yOTY4NzUgMzUgMjEgMzUgQyAxMi43MDMxMjUgMzUgNiAyOC4yOTY4NzUgNiAyMCBDIDYgMTEuNzAzMTI1IDEyLjcwMzEyNSA1IDIxIDUgWiI+PC9wYXRoPjwvc3ZnPg==")
+      50% 50% no-repeat;
+    background-size: 100%;
+  }
+}

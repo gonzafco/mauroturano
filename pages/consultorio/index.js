@@ -1,10 +1,18 @@
-import styles from "./talleres.module.scss";
-import Header from "../../Components/Header";
+import styles from "./consultorio.module.scss";
+import Header from "../../src/Components/Header";
+import ConsultorioHero from "../../src/Components/ConsultorioHero";
+import Footer from "../../src/Components/Footer";
+import {
+  title,
+  text,
+} from "../../public/assets/json/ConsultorioInformation.json";
 
 export default function index() {
   return (
-    <section className={styles.Talleres}>
+    <>
       <Header />
-    </section>
+      <ConsultorioHero title={title} text={text} />
+      <Footer />
+    </>
   );
 }

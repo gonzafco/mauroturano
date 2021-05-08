@@ -1,19 +1,19 @@
 [
   {
-    "title": "Consultorio",
+    "title": "consultorio",
     "text": "Accede a la agenda semanal y consulta por un turno disponible para vos."
   },
 
   {
-    "title": "Talleres",
+    "title": "talleres",
     "text": "Observa el contenido disponible que tenemos pensado desde un marco psicologico."
   },
   {
-    "title": "Blog",
+    "title": "blog",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
   },
   {
-    "title": "Cuentos y libros ",
+    "title": "cuentos y libros ",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet."
   },
   {
@@ -21,7 +21,7 @@
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet."
   },
   {
-    "title": "Redes sociales",
+    "title": "redes sociales",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet."
   }
 ]

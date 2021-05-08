@@ -9,7 +9,7 @@
   overflow: hidden;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  &:hover > .BorderColor{
+  &:hover > .BorderColor {
     background: rgba(#ff2014, 0.5);
   }
 
@@ -19,7 +19,9 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    text-transform: initial;
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
 
   .CardText {
@@ -37,6 +39,29 @@
     height: 100%;
     background: rgba(#1282a2, 0.5);
   }
+
+  .FooterCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .DatePost {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 20px;
+      color: #1282a2;
+    }
+    .BtnViewPost {
+      width: 145px;
+      height: 45px;
+      border: unset;
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 18px;
+      color: #f7f7f7;
+
+      background: #1282a2;
+      border-radius: 15px;
+    }
+  }
 }
-
-

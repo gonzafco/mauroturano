@@ -1,5 +1,5 @@
 {
-  "title": "Blog",
+  "title": "blog",
   "text": "Blog de psicología, clara y sencilla. Lista para aplicar a tu vida cotidiana. Conociéndote mas a ti mismo, tus funciones y lograr una Mente Fuerte",
   "cards": [
     {
@@ -13,6 +13,64 @@
     {
       "title": "Los miedos, nuestros mejores amigos",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam neque bibendum cursus."
+    }
+  ],
+  "posts": [
+    {
+      "type": "blog",
+      "title": "Un psicólogo en un evento social?",
+      "subtitle": "Estaba con mi mujer en una reunión familiar, se festejaba el cumpleaños de un año del hijo de unos amigos de elvla, o eso creí entender cuando me explico dónde vamos.",
+      "content": "Estaba con mi mujer en una reunión familiar, se festejaba el cumpleaños de un año del hijo de unos amigos de elvla, o eso creí entender cuando me explico dónde vamos.",
+      "date": "19/10/2019"
+    },
+    {
+      "type": "blog",
+      "title": "El caramelo volador",
+      "subtitle": "Agarra tu taza de café más grande, hoy vamos a juntar dos grandes pasiones en mi vida, los cuentos y mamá. Es importante aclarar de ante mano que es una historia real, no hay datos inflados y aunque cueste... ",
+      "content": "Agarra tu taza de café más grande, hoy vamos a juntar dos grandes pasiones en mi vida, los cuentos y mamá. Es importante aclarar de ante mano que es una historia real, no hay datos inflados y aunque cueste... ",
+      "date": "19/10/2019"
+    },
+    {
+      "type": "blog",
+      "title": "Un psicólogo en un evento social?",
+      "subtitle": "Estaba con mi mujer en una reunión familiar, se festejaba el cumpleaños de un año del hijo de unos amigos de elvla, o eso creí entender cuando me explico dónde vamos.",
+      "content": "Estaba con mi mujer en una reunión familiar, se festejaba el cumpleaños de un año del hijo de unos amigos de elvla, o eso creí entender cuando me explico dónde vamos.",
+      "date": "19/10/2019"
+    },
+    {
+      "type": "blog",
+      "title": "El caramelo volador",
+      "subtitle": "Agarra tu taza de café más grande, hoy vamos a juntar dos grandes pasiones en mi vida, los cuentos y mamá. Es importante aclarar de ante mano que es una historia real, no hay datos inflados y aunque cueste... ",
+      "content": "Agarra tu taza de café más grande, hoy vamos a juntar dos grandes pasiones en mi vida, los cuentos y mamá. Es importante aclarar de ante mano que es una historia real, no hay datos inflados y aunque cueste... ",
+      "date": "19/10/2019"
+    },
+    {
+      "type": "blog",
+      "title": "Un psicólogo en un evento social?",
+      "subtitle": "Estaba con mi mujer en una reunión familiar, se festejaba el cumpleaños de un año del hijo de unos amigos de elvla, o eso creí entender cuando me explico dónde vamos.",
+      "content": "Estaba con mi mujer en una reunión familiar, se festejaba el cumpleaños de un año del hijo de unos amigos de elvla, o eso creí entender cuando me explico dónde vamos.",
+      "date": "19/10/2019"
+    },
+    {
+      "type": "blog",
+      "title": "El caramelo volador",
+      "subtitle": "Agarra tu taza de café más grande, hoy vamos a juntar dos grandes pasiones en mi vida, los cuentos y mamá. Es importante aclarar de ante mano que es una historia real, no hay datos inflados y aunque cueste... ",
+      "content": "Agarra tu taza de café más grande, hoy vamos a juntar dos grandes pasiones en mi vida, los cuentos y mamá. Es importante aclarar de ante mano que es una historia real, no hay datos inflados y aunque cueste... ",
+      "date": "19/10/2019"
+    },
+    {
+      "type": "blog",
+      "title": "Un psicólogo en un evento social?",
+      "subtitle": "Estaba con mi mujer en una reunión familiar, se festejaba el cumpleaños de un año del hijo de unos amigos de elvla, o eso creí entender cuando me explico dónde vamos.",
+      "content": "Estaba con mi mujer en una reunión familiar, se festejaba el cumpleaños de un año del hijo de unos amigos de elvla, o eso creí entender cuando me explico dónde vamos.",
+      "date": "19/10/2019"
+    },
+    {
+      "type": "blog",
+      "title": "El caramelo volador",
+      "subtitle": "Agarra tu taza de café más grande, hoy vamos a juntar dos grandes pasiones en mi vida, los cuentos y mamá. Es importante aclarar de ante mano que es una historia real, no hay datos inflados y aunque cueste... ",
+      "content": "Agarra tu taza de café más grande, hoy vamos a juntar dos grandes pasiones en mi vida, los cuentos y mamá. Es importante aclarar de ante mano que es una historia real, no hay datos inflados y aunque cueste... ",
+      "date": "19/10/2019"
     }
   ]
 }
