@@ -12,8 +12,8 @@ export default function index({ title, text, modules, video }) {
         {modules.map((module, key) => {
           return (
             <Card
-              title={module.title}
-              text={module.text}
+              title={module.module_title}
+              text={module.description}
               key={key}
               path={""}
             />

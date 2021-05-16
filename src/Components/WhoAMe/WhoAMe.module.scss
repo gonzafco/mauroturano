@@ -4,10 +4,20 @@
   align-items: center;
   padding: 0 120px;
   height: 100vh;
+
+  @media (max-width: 575.98px) {
+    height: auto;
+    padding: 100px 20px;
+  }
   .TextContainer {
     width: calc(50% - 30px);
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 575.98px) {
+      width: 100%;
+      padding: 0 20px;
+    }
     .Presentation {
       font-family: Montserrat, "sans-serif";
       font-weight: 500;
@@ -36,6 +46,9 @@
     background-repeat: no-repeat;
     .ImgDecoration {
       height: 410px;
+    }
+    @media (max-width: 575.98px) {
+      display: none;
     }
   }
 }

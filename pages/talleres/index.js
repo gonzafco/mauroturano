@@ -8,10 +8,32 @@ import {
   title,
   text,
   cards,
-  workshops,
 } from "../../public/assets/json/TalleresInformation.json";
 
+import sanityClient from "../../src/client";
+import { useState, useEffect } from "react";
+
 export default function index() {
+  const [talleres, setTalleres] = useState();
+  const [workshops, setWorkshops] = useState();
+  useEffect(() => {
+    fetchDataTalleres();
+    fetchDataWorkshops();
+  }, []);
+
+  function fetchDataTalleres() {
+    sanityClient
+      .fetch('*[_type=="sections" && section == "talleres"][0]{title,text}')
+      .then((data) => setTalleres(data))
+      .catch(console.error);
+  }
+
+  function fetchDataWorkshops() {
+    sanityClient
+      .fetch('*[_type=="workshops"]{title,subtitle,modules}')
+      .then((data) => setWorkshops(data))
+      .catch(console.error);
+  }
   return (
     <>
       <Head>
@@ -19,9 +41,13 @@ export default function index() {
       </Head>
       <Header />
       <section className={styles.Talleres}>
-        <WorkshopHero title={title} text={text} cards={cards} />
+        <WorkshopHero
+          title={talleres?.title}
+          text={talleres?.text}
+          cards={cards}
+        />
 
-        {workshops.map((workshop, key) => {
+        {workshops?.map((workshop, key) => {
           return (
             <WorkshopDetail
               title={workshop.title}

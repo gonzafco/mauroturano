@@ -15,9 +15,6 @@ export default function index() {
       .then((data) => setNavbar(data))
       .catch(console.error);
   }
-
-  console.log(navbar);
-
   return (
     <>
       {navbar.map((nav, key) => (

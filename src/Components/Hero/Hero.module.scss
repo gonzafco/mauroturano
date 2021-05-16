@@ -5,8 +5,18 @@
   flex-wrap: wrap;
   height: 80vh;
 
+  @media (max-width: 575.98px) {
+    height: auto;
+  }
+
   & > div {
     flex-basis: 30%;
     height: 190px;
+
+    @media (max-width: 575.98px) {
+      flex-basis: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
   }
 }

@@ -4,14 +4,25 @@ import Header from "../../src/Components/Header";
 import WorkshopHero from "../../src/Components/WorkshopHero";
 import MorePost from "../../src/Components/MorePost";
 import Footer from "../../src/Components/Footer";
-import {
-  title,
-  text,
-  cards,
-  posts,
-} from "../../public/assets/json/BlogInformation.json";
+import sanityClient from "../../src/client";
+import { useState, useEffect } from "react";
+import { cards } from "../../public/assets/json/BlogInformation.json";
 
 export default function index() {
+  const [blog, setBlog] = useState();
+
+  useEffect(() => {
+    fetchDataBlog();
+  }, []);
+
+  function fetchDataBlog() {
+    sanityClient
+      .fetch('*[_type=="sections" && section == "blog"][0]{title,text}')
+      .then((data) => setBlog(data))
+      .catch(console.error);
+  }
+
+  
   return (
     <>
       <Head>
@@ -19,8 +30,8 @@ export default function index() {
       </Head>
       <Header />
       <section className={styles.Blog}>
-        <WorkshopHero title={title} text={text} cards={cards} />
-        <MorePost posts={posts} />
+        <WorkshopHero title={blog?.title} text={blog?.text} cards={cards} />
+        <MorePost/>
       </section>
       <Footer />
     </>

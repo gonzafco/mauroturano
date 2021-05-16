@@ -12,20 +12,12 @@ export default function Home() {
   const [whoAMe, setWhoAMe] = useState();
   useEffect(() => {
     fetchDataHome();
-    fetchDataWhoAMe();
   }, []);
 
   function fetchDataHome() {
     sanityClient
       .fetch('*[_type=="home"]{text,title,path}')
       .then((data) => setCardsContent(data))
-      .catch(console.error);
-  }
-
-  function fetchDataWhoAMe() {
-    sanityClient
-      .fetch('*[_type=="whoAMe"][0]{name,text,title}')
-      .then((data) => setWhoAMe(data))
       .catch(console.error);
   }
 
@@ -39,8 +31,7 @@ export default function Home() {
       <div className={styles.Home}>
         <Hero cards={cardsContent} />
       </div>
-      <WhoAMe whoAMe={whoAMe} />
-
+      <WhoAMe />
       <Footer />
     </>
   );

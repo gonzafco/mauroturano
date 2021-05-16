@@ -1,3 +1,7 @@
 .Home{
   padding: 0 120px;
+
+  @media (max-width: 575.98px) {
+    padding: 0 20px;
+  }
 }
