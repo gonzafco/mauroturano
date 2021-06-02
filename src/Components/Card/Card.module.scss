@@ -1,3 +1,11 @@
+// @mixin line-clamp($nth-number-lines) {
+//   text-overflow: ellipsis;
+//   display: -webkit-box;
+//   -webkit-line-clamp: $nth-number-lines;
+//   -webkit-box-orient: vertical;
+//   overflow: hidden;
+// }
+
 .Card {
   position: relative;
   display: flex;
@@ -30,6 +38,8 @@
     font-size: 18px;
     line-height: 22px;
     color: #000000;
+    // @include line-clamp(100);
+
   }
   .BorderColor {
     position: absolute;

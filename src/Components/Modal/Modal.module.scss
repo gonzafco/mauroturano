@@ -1,0 +1,39 @@
+.ModalBox {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: rgba(#ffffff, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+
+  .Modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 300px;
+    background: rgba(#ffffff, 1);
+    border: 2px solid #1282a2;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 30px;
+
+    :last-child {
+      align-self: flex-end;
+    }
+
+    .ModalTitle {
+      font-family: Montserrat, sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    .ModalText {
+      font-family: Montserrat, sans-serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+}

@@ -8,7 +8,7 @@ export default function Header() {
     <header className={styles.Header}>
       <Brand brand={"Mauro Turano"} path={"/"} />
       {/* <Navbar /> */}
-      <PrimaryBtn path="/#quiensoy" text={"¿Quien soy?"} />
+      <PrimaryBtn path="/#quiensoy" text={"Contactame"} />
     </header>
   );
 }

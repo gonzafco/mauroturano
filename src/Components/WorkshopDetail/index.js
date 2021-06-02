@@ -1,7 +1,7 @@
 import styles from "./WorkshopDetail.module.scss";
 import Card from "../Card";
 
-export default function index({ title, text, modules, video }) {
+export default function index({ title, text, modules, video, path }) {
   return (
     <div className={styles.WorkShopContainer}>
       <div className={styles.BoxDescription}>
@@ -15,7 +15,8 @@ export default function index({ title, text, modules, video }) {
               title={module.module_title}
               text={module.description}
               key={key}
-              path={""}
+              path={path}
+              clampLines={3}
             />
           );
         })}

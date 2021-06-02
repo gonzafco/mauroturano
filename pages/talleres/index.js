@@ -4,36 +4,10 @@ import Header from "../../src/Components/Header";
 import WorkshopHero from "../../src/Components/WorkshopHero";
 import WorkshopDetail from "../../src/Components/WorkshopDetail";
 import Footer from "../../src/Components/Footer";
-import {
-  title,
-  text,
-  cards,
-} from "../../public/assets/json/TalleresInformation.json";
-
+import { cards } from "../../public/assets/json/TalleresInformation.json";
 import sanityClient from "../../src/client";
-import { useState, useEffect } from "react";
 
-export default function index() {
-  const [talleres, setTalleres] = useState();
-  const [workshops, setWorkshops] = useState();
-  useEffect(() => {
-    fetchDataTalleres();
-    fetchDataWorkshops();
-  }, []);
-
-  function fetchDataTalleres() {
-    sanityClient
-      .fetch('*[_type=="sections" && section == "talleres"][0]{title,text}')
-      .then((data) => setTalleres(data))
-      .catch(console.error);
-  }
-
-  function fetchDataWorkshops() {
-    sanityClient
-      .fetch('*[_type=="workshops"]{title,subtitle,modules}')
-      .then((data) => setWorkshops(data))
-      .catch(console.error);
-  }
+export default function index({ title, text, workshops, basePath }) {
   return (
     <>
       <Head>
@@ -41,11 +15,7 @@ export default function index() {
       </Head>
       <Header />
       <section className={styles.Talleres}>
-        <WorkshopHero
-          title={talleres?.title}
-          text={talleres?.text}
-          cards={cards}
-        />
+        <WorkshopHero title={title} text={text} cards={cards} />
 
         {workshops?.map((workshop, key) => {
           return (
@@ -53,6 +23,7 @@ export default function index() {
               title={workshop.title}
               video={workshop.video}
               modules={workshop.modules}
+              path={`${basePath}/${workshop.slug.current}`}
               key={key}
             />
           );
@@ -61,4 +32,21 @@ export default function index() {
       <Footer />
     </>
   );
+}
+export async function getServerSideProps(context) {
+  const queryTalleres =
+    '*[_type=="sections" && section == "talleres"][0]{title,text}';
+  const talleres = await sanityClient.fetch(queryTalleres);
+
+  const queryWorkshops = '*[_type=="workshops"]{title,subtitle,modules,slug}';
+  const workshops = await sanityClient.fetch(queryWorkshops);
+
+  return {
+    props: {
+      basePath: context.resolvedUrl,
+      title: talleres.title,
+      text: talleres.text,
+      workshops,
+    },
+  };
 }
