@@ -1,4 +1,5 @@
 import styles from "./WorkshopDetail.module.scss";
+import Link from "next/link";
 import Card from "../Card";
 
 export default function index({ title, text, modules, video, path }) {
@@ -11,13 +12,16 @@ export default function index({ title, text, modules, video, path }) {
       <div className={styles.BoxCards}>
         {modules.map((module, key) => {
           return (
-            <Card
-              title={module.module_title}
-              text={module.description}
-              key={key}
-              path={path}
-              clampLines={3}
-            />
+            <Link href={path}>
+              <a>
+                <Card
+                  title={module.module_title}
+                  text={module.description}
+                  key={key}
+                  clampLines={3}
+                />
+              </a>
+            </Link>
           );
         })}
       </div>

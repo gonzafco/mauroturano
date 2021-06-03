@@ -9,10 +9,10 @@
     height: auto;
   }
 
-  & > div {
+  & > a  {
     flex-basis: 30%;
-    height: 190px;
-
+    
+    & > div {height: 100%;}
     @media (max-width: 575.98px) {
       flex-basis: 100%;
       height: auto;

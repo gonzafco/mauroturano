@@ -1,7 +1,7 @@
-import styles from "./Navbar.module.scss";
 import Card from "../Card";
 import { useState, useEffect } from "react";
 import sanityClient from "../../client";
+import Link from "next/link";
 export default function index() {
   const [navbar, setNavbar] = useState([]);
 
@@ -9,16 +9,20 @@ export default function index() {
     fetchDataNavbar();
   }, []);
 
-  function fetchDataNavbar() {
-    sanityClient
-      .fetch('*[_type=="home"]{title,path}')
-      .then((data) => setNavbar(data))
-      .catch(console.error);
+  async function fetchDataNavbar() {
+    const query = '*[_type=="home"]{title,path}';
+    const data = await sanityClient.fetch(query);
+
+    setNavbar(data);
   }
   return (
     <>
       {navbar.map((nav, key) => (
-        <Card title={nav.title} path={nav.path} key={key} />
+        <Link href={`/${nav.path}`} replace>
+          <a>
+            <Card title={nav.title} key={key} />
+          </a>
+        </Link>
       ))}
     </>
   );

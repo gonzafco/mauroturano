@@ -3,17 +3,30 @@
   justify-content: space-between;
   height: calc(100vh - 120px);
   align-items: center;
+
+  @media (max-width: 575.98px) and (min-width: 320px) {
+    height: auto;
+    flex-direction: column;
+  }
   .BoxText {
     display: flex;
     width: calc(50% - 50px);
     font-family: Montserrat, sans-serif;
     flex-direction: column;
 
+    @media (max-width: 575.98px) {
+      width: 100%;
+    }
+
     .Title {
       font-size: 48px;
       font-weight: 500;
       &::first-letter {
         text-transform: uppercase;
+      }
+
+      @media (max-width: 575.98px) and (min-width: 320px) {
+        text-align: center;
       }
     }
     .Text {
@@ -28,6 +41,14 @@
     flex-direction: column;
     justify-content: space-between;
     width: 582px;
+
+    @media (max-width: 375px) {
+      width: auto;
+    }
+
+    @media (max-width: 575.98px) and (min-width: 320px) {
+      width: auto;
+    }
 
     & > div {
       margin-bottom: 20px;

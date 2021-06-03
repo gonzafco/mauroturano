@@ -4,23 +4,9 @@ import Header from "../src/Components/Header";
 import Hero from "../src/Components/Hero";
 import WhoAMe from "../src/Components/WhoAMe";
 import Footer from "../src/Components/Footer";
-import { useState, useEffect } from "react";
 import sanityClient from "../src/client";
 
-export default function Home() {
-  const [cardsContent, setCardsContent] = useState([]);
-  const [whoAMe, setWhoAMe] = useState();
-  useEffect(() => {
-    fetchDataHome();
-  }, []);
-
-  function fetchDataHome() {
-    sanityClient
-      .fetch('*[_type=="home"]{text,title,path}')
-      .then((data) => setCardsContent(data))
-      .catch(console.error);
-  }
-
+export default function Home({ cardsContent }) {
   return (
     <>
       <Head>
@@ -35,4 +21,10 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const query = `*[_type=="home"]{text,title,path}`;
+  const cardsContent = await sanityClient.fetch(query);
+  return { props: { cardsContent } };
 }

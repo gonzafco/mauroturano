@@ -11,7 +11,7 @@ export default function index({ title, text, cards, video }) {
       <div className={styles.BoxCards}>
         {cards.map((card, key) => {
           return (
-            <Card title={card.title} text={card.text} key={key} path={""} />
+            <Card title={card.title} text={card.text} key={key} path={""} clampLines={4} />
           );
         })}
       </div>

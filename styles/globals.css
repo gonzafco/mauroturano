@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 
+@font-face {
+  font-family: "Equinox";
+  src: url("/assets/font/Equinox-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Equinox";
+  src: url("/assets/font/Equinox-Bold.otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
 html,
 body {
   padding: 0;

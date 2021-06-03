@@ -3,14 +3,28 @@
   // display: flex;
   // flex-direction: column;
 
+  @media (max-width: 575.98px) and (min-width: 320px) {
+    padding: 0 20px;
+  }
+
   .HeaderSectionBox {
     display: flex;
     align-items: center;
     font-family: Montserrat, "sans-serif";
     font-size: 2rem;
     margin: 30px 0px;
+
+    @media (max-width: 480px){
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
     .SectionName {
       font-weight: 500;
+
+      @media (max-width: 480px){
+        margin-bottom: 20px;
+      }
 
       &::after {
         content: "";
@@ -20,6 +34,10 @@
         height: 20px;
         width: 20px;
         margin: 0px 10px;
+
+        @media (max-width: 480px){
+          display: none;
+        }
       }
     }
   }

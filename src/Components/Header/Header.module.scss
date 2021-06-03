@@ -4,4 +4,15 @@
   justify-content: space-between;
   height: 130px;
   padding: 0px 120px;
+
+  @media (max-width: 575.98px) {
+    padding:0;
+    justify-content: center;
+  }
+
+  .ContactMe{
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+  }
 }

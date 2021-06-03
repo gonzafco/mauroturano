@@ -7,7 +7,6 @@ export default function index({ title, text, date, path }) {
       {text && <p className={styles.CardText}>{text}</p>}
       <div className={styles.BorderColor}></div>
       <div className={styles.FooterCard}>
-        <span className={styles.DatePost}>{date}</span>
         <button className={styles.BtnViewPost}>Ver mas</button>
       </div>
     </div>

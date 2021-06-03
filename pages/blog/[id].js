@@ -2,7 +2,6 @@ import Header from "../../src/Components/Header";
 import Footer from "../../src/Components/Footer";
 
 export default function index(params) {
-  console.log(params)
   return (
     <>
       <Header />
@@ -11,10 +10,4 @@ export default function index(params) {
       <Footer />
     </>
   );
-}
-
-export async function getServerSideProps(context) {
-  return {
-    props: { title: "hola" }, // will be passed to the page component as props
-  };
 }
