@@ -44,10 +44,13 @@
 
     @media (max-width: 375px) {
       width: auto;
+      display: none;
     }
 
     @media (max-width: 575.98px) and (min-width: 320px) {
       width: auto;
+
+      display: none;
     }
 
     & > div {

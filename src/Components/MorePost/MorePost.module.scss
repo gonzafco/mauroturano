@@ -4,13 +4,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 575.98px) and (min-width: 320px) {
+      flex-direction: column;
+    }
     .titleBox {
       font-family: Montserrat, "sans-serif";
       font-weight: 500;
       font-size: 48px;
+
+      @media (max-width: 575.98px) and (min-width: 320px) {
+        font-size: 2rem;
+      }
     }
     .SearchBox {
       width: 30%;
+
+      @media (max-width: 575.98px) and (min-width: 320px) {
+        margin-top: 20px;
+        width: 100%;
+      }
     }
   }
   .PostsContainer {
@@ -18,9 +31,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
-    & > div {
+    align-content: stretch;
+    & > a {
       width: calc(50% - 30px);
       margin-bottom: 30px;
+      @media (max-width: 575.98px) and (min-width: 320px) {
+        width: 100%;
+      }
     }
+
+    
   }
 }

@@ -5,24 +5,12 @@ import WorkshopHero from "../../src/Components/WorkshopHero";
 import MorePost from "../../src/Components/MorePost";
 import Footer from "../../src/Components/Footer";
 import sanityClient from "../../src/client";
-import { useState, useEffect } from "react";
-import { cards } from "../../public/assets/json/BlogInformation.json";
 
-export default function index() {
-  const [blog, setBlog] = useState();
-
-  useEffect(() => {
-    fetchDataBlog();
-  }, []);
-
-  function fetchDataBlog() {
-    sanityClient
-      .fetch('*[_type=="sections" && section == "blog"][0]{title,text}')
-      .then((data) => setBlog(data))
-      .catch(console.error);
-  }
-
-  
+export default function index({
+  sectionInformation,
+  firstPost,
+  morePostsBlogs,
+}) {
   return (
     <>
       <Head>
@@ -30,10 +18,33 @@ export default function index() {
       </Head>
       <Header />
       <section className={styles.Blog}>
-        <WorkshopHero title={blog?.title} text={blog?.text} cards={cards} />
-        <MorePost/>
+        <WorkshopHero
+          title={sectionInformation.title}
+          text={sectionInformation.text}
+          cards={firstPost}
+        />
+        <MorePost posts={morePostsBlogs} />
       </section>
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const firstquery = `*[_type=="sections" && section == "blog"][0]{title,text}`;
+  const sectionInformation = await sanityClient.fetch(firstquery);
+
+  const secondQuery = `*[_type=="posts"][0..2]{title,subtitle,slug}`;
+  const firstPost = await sanityClient.fetch(secondQuery);
+
+  const postsQuery = `*[_type=="posts"]{slug,title,subtitle}`;
+  const morePostsBlogs = await sanityClient.fetch(postsQuery);
+
+  return {
+    props: {
+      sectionInformation,
+      firstPost,
+      morePostsBlogs,
+    },
+  };
 }

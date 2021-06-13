@@ -1,6 +1,6 @@
 import styles from "./Card.module.scss";
 import { useState, useEffect } from "react";
-export default function index({ title, text, clampLines, path }) {
+export default function index({ title, text, clampLines }) {
   const [classClamp, setClassClamp] = useState({});
   useEffect(() => {
     defineClam(clampLines);

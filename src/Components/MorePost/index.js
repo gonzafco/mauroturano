@@ -1,19 +1,8 @@
 import styles from "./MorePost.module.scss";
 import Search from "../Search";
 import BlogCard from "../CardBlog";
-import sanityClient from "../../client";
-import { useState, useEffect } from "react";
-export default function index() {
-  const [posts, setPosts] = useState();
-  useEffect(() => {
-    fetchDataPosts();
-  }, []);
-  function fetchDataPosts() {
-    sanityClient
-      .fetch('*[_type=="posts"]{"date":_createdAt,_id,title,subtitle,text}')
-      .then((data) => setPosts(data))
-      .catch(console.error);
-  }
+import Link from "next/link";
+export default function index({ posts }) {
   return (
     <div className={styles.MorePost}>
       <div className={styles.MorePostHeader}>
@@ -23,15 +12,19 @@ export default function index() {
         </div>
       </div>
       <div className={styles.PostsContainer}>
-        {posts?.map((post, key) => (
-          <BlogCard
-            title={post.title}
-            text={post.subtitle}
-            date={post.date}
-            key={key}
-            id={post._id}
-          />
-        ))}
+        {posts.map((post, key) => {
+          return (
+            <Link href={`blog/${post.slug.current}`}>
+              <a>
+                <BlogCard
+                  title={post.title}
+                  subtitle={post.subtitle}
+                  key={key}
+                />
+              </a>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
