@@ -29,11 +29,12 @@
       font-weight: normal;
       color: #1282a2;
     }
-    .Paragraph {
+    div > p {
       font-family: Montserrat, "sans-serif";
       font-size: 18px;
       font-weight: 300;
       color: #000000;
+      line-height: 1.8rem;
     }
   }
   .BlobDecoration {

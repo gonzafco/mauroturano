@@ -1,7 +1,7 @@
 import styles from "./Whoami.module.scss";
 import Link from "next/link";
 
-export default function PrimaryBtn({ text, path }) {
+export default function PrimaryBtn({ text }) {
   const message =
     "Hola! Vengo de mauroturano.com.ar. Quiero comunicarme con vos. Mi nombre es: ";
   const phone = "5491135603763";

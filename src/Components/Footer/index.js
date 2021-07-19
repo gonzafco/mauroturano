@@ -3,8 +3,8 @@ import Navbar from "../Navbar";
 import PrimaryBtn from "../PrimaryBtn";
 import styles from "./Footer.module.scss";
 export default function index() {
-  const brand = "Mauro Turano";
-  const text = "Contactame";
+  const brand = "Lic. Mauro Turano";
+  const text = "Contactarme";
   return (
     <footer className={styles.Footer}>
       <div className={styles.Navbar}>

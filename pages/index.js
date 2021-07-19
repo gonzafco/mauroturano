@@ -6,7 +6,7 @@ import WhoAMe from "../src/Components/WhoAMe";
 import Footer from "../src/Components/Footer";
 import sanityClient from "../src/client";
 
-export default function Home({ cardsContent }) {
+export default function Home({ cardsContent, whoAMeContent }) {
   return (
     <>
       <Head>
@@ -17,14 +17,18 @@ export default function Home({ cardsContent }) {
       <div className={styles.Home}>
         <Hero cards={cardsContent} />
       </div>
-      <WhoAMe />
+      <WhoAMe quienSoy={whoAMeContent} />
       <Footer />
     </>
   );
 }
 
 export async function getStaticProps(context) {
-  const query = `*[_type=="home"]{text,title,path}`;
-  const cardsContent = await sanityClient.fetch(query);
-  return { props: { cardsContent } };
+  const queryCards = `*[_type=="home"]{text,title,path}`;
+  const cardsContent = await sanityClient.fetch(queryCards);
+
+  const queryWhoAMe = `*[_type=="whoAMe"][0]{name,text,title}`;
+  const whoAMeContent = await sanityClient.fetch(queryWhoAMe);
+
+  return { props: { cardsContent, whoAMeContent } };
 }

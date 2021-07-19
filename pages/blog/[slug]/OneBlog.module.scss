@@ -1,3 +1,6 @@
+$line-height: 1.5;
+$font-size-text: 1.25rem;
+
 .OneBlogBox {
   font-family: Montserrat, "sans-serif";
   padding: 0px 120px;
@@ -12,8 +15,10 @@
   }
   div {
     p {
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: $font-size-text;
+      line-height: $line-height;
+      font-weight: 300;
+      text-align: justify;
     }
 
     blockquote {
@@ -22,6 +27,10 @@
       border-left: 10px solid rgba(#1282a2, 0.5);
       margin: 0;
       padding: 20px 20px;
+      font-size: $font-size-text;
+      line-height: $line-height;
+      font-weight: 300;
+      text-align: justify;
     }
   }
 }

@@ -8,11 +8,11 @@ export default function slug({ title, subtitle, text }) {
   console.log(text);
   return (
     <>
+      <Head>
+        <title>Blog - {title}</title>
+      </Head>
+      <Header />
       <article className={styles.OneBlogBox}>
-        <Head>
-          <title>Blog - {title}</title>
-        </Head>
-        <Header />
         <h1 className={styles.Title}>{title}</h1>
         <h2 className={styles.Subtitle}>{subtitle}</h2>
         <BlockContent blocks={text} />

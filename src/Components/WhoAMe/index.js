@@ -1,26 +1,14 @@
 import styles from "./WhoAMe.module.scss";
-import sanityClient from "../../client";
-import { useState, useEffect } from "react";
+import BlockContent from "@sanity/block-content-to-react";
 
-export default function index() {
-  const [quienSoy, setQuienSoy] = useState();
-  useEffect(() => {
-    fetchDataWhoAMe();
-  }, []);
-
-  function fetchDataWhoAMe() {
-    sanityClient
-      .fetch('*[_type=="whoAMe"][0]{name,text,title}')
-      .then((data) => setQuienSoy(data))
-      .catch(console.error);
-  }
+export default function index({ quienSoy }) {
   return (
     <section id="quiensoy" className={styles.WhoAMe}>
       <div className={styles.TextContainer}>
-        <span className={styles.Presentation}>{quienSoy?.title}</span>
-        <span className={styles.FullName}>{quienSoy?.name}</span>
+        <span className={styles.Presentation}>{quienSoy.title}</span>
+        <span className={styles.FullName}>{quienSoy.name}</span>
 
-        <p className={styles.Paragraph}>{quienSoy?.text}</p> 
+        <BlockContent blocks={quienSoy.text} />
       </div>
       <div className={styles.BlobDecoration}>
         <img
