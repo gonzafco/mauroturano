@@ -9,10 +9,18 @@
     height: auto;
   }
 
-  & > a  {
+  & > a {
     flex-basis: 30%;
-    
-    & > div {height: 100%;}
+
+    & > div {
+      height: 100%;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        box-shadow: 5px 5px 5px rgba(#000, 25%);
+        transform: scale(1.03);
+      }
+    }
     @media (max-width: 575.98px) {
       flex-basis: 100%;
       height: auto;
