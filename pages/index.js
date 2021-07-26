@@ -24,11 +24,10 @@ export default function Home({ cardsContent, whoAMeContent }) {
 }
 
 export async function getStaticProps(context) {
-  const queryCards = `*[_type=="home"]{text,title,path}`;
+  const queryCards = `*[_type=="home"][0]{cards}`;
   const cardsContent = await sanityClient.fetch(queryCards);
 
   const queryWhoAMe = `*[_type=="whoAMe"][0]{name,text,title}`;
-  const whoAMeContent = await sanityClient.fetch(queryWhoAMe);
-
-  return { props: { cardsContent, whoAMeContent } };
+  const whoAMeContent = await sanityClient.fetch(queryWhoAMe);  
+  return { props: { cardsContent: cardsContent.cards, whoAMeContent } };
 }

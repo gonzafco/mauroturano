@@ -5,7 +5,6 @@ import Header from "../../../src/Components/Header";
 import Footer from "../../../src/Components/Footer";
 import BlockContent from "@sanity/block-content-to-react";
 export default function slug({ title, subtitle, text }) {
-  console.log(text);
   return (
     <>
       <Head>

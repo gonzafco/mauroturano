@@ -10,10 +10,10 @@ export default function index() {
   }, []);
 
   async function fetchDataNavbar() {
-    const query = '*[_type=="home"]{title,path}';
+    const query = `*[_type=="home"][0]{cards}`;
     const data = await sanityClient.fetch(query);
 
-    setNavbar(data);
+    setNavbar(data.cards);
   }
   return (
     <>
