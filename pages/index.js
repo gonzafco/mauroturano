@@ -23,7 +23,7 @@ export default function Home({ cardsContent, whoAMeContent }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(){
   const queryCards = `*[_type=="home"][0]{cards}`;
   const cardsContent = await sanityClient.fetch(queryCards);
 
