@@ -8,8 +8,9 @@ import sanityClient from "../../src/client";
 
 export default function index({
   sectionInformation,
-  firstPost,
+  firstsPost,
   morePostsBlogs,
+  basePath,
 }) {
   return (
     <>
@@ -21,7 +22,8 @@ export default function index({
         <WorkshopHero
           title={sectionInformation.title}
           text={sectionInformation.text}
-          cards={firstPost}
+          cards={firstsPost}
+          basePath={basePath}
         />
         <MorePost posts={morePostsBlogs} />
       </section>
@@ -35,7 +37,7 @@ export async function getServerSideProps(context) {
   const sectionInformation = await sanityClient.fetch(firstquery);
 
   const secondQuery = `*[_type=="posts"][0..2]{title,subtitle,slug}`;
-  const firstPost = await sanityClient.fetch(secondQuery);
+  const firstsPost = await sanityClient.fetch(secondQuery);
 
   const postsQuery = `*[_type=="posts"]{slug,title,subtitle}`;
   const morePostsBlogs = await sanityClient.fetch(postsQuery);
@@ -43,8 +45,9 @@ export async function getServerSideProps(context) {
   return {
     props: {
       sectionInformation,
-      firstPost,
+      firstsPost,
       morePostsBlogs,
+      basePath: context.resolvedUrl,
     },
   };
 }

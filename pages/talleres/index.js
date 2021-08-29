@@ -4,7 +4,6 @@ import Header from "../../src/Components/Header";
 import WorkshopHero from "../../src/Components/WorkshopHero";
 import WorkshopDetail from "../../src/Components/WorkshopDetail";
 import Footer from "../../src/Components/Footer";
-import { cards } from "../../public/assets/json/TalleresInformation.json";
 import sanityClient from "../../src/client";
 
 export default function index({ title, text, workshops, basePath }) {
@@ -15,9 +14,9 @@ export default function index({ title, text, workshops, basePath }) {
       </Head>
       <Header />
       <section className={styles.Talleres}>
-        <WorkshopHero title={title} text={text} cards={cards} />
+        <WorkshopHero title={title} text={text} cards={workshops} basePath={basePath} />
 
-        {workshops?.map((workshop, key) => {
+        {workshops.map((workshop, key) => {
           return (
             <WorkshopDetail
               title={workshop.title}
